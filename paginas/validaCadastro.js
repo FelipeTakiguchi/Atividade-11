@@ -7,14 +7,22 @@ module.exports.post = (req, res) => {
   let status;
   let html;
   if (email !== '' && senha !== '' && senhadois !== '') {
-    const cadastro = {
-      novoEmail: email,
-      novaSenha: senha,
-      novaSenhaDois: senhadois,
-    };
-    cadastros.push(cadastro);
-    status = 200;
-    html = template('Cadastrado com sucesso', `<p>Seja bem vindo ${email}</p>`);
+    if(senha === senhadois){
+      const cadastro = {
+        novoEmail: email,
+        novaSenha: senha,
+        novaSenhaDois: senhadois,
+      };
+      cadastros.push(cadastro);
+      status = 200;
+      html = template('Cadastrado com sucesso', `<p>Seja bem vindo ${email}</p>`);
+    } else{
+      status = 401;
+      html = template(
+        'Senhas não batem',
+        '<p>Confirme sua senha corretamente</p>'
+      ); 
+    }
   } else {
     status = 401;
     html = template(

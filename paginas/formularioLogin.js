@@ -8,14 +8,13 @@ module.exports = (req, res) => {
       <form action="/login" method="post">
         <div class="form-group">
           <label for="email">Email</label>
-          <input type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Email">
-          <small id="emailHelp" class="form-text text-muted">Nunca compartilharemos seu e-mail com ninguém.</small>
+          <input type="email" class="form-control" id="email" name="email" aria-describedby="emailHelp" placeholder="Email">
         </div>
         <div class="form-group">
           <label for="senha">Senha</label>
-          <input type="password" class="form-control" id="senha" placeholder="Senha">
+          <input type="password" class="form-control" name="senha" id="senha" placeholder="Senha">
         </div>
-        <div class="col text-center">
+        <div class="col">
           <button type="submit" class="btn btn-primary mt-4">Submit</button>
         </div>
       </form>
