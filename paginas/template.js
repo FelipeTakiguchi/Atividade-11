@@ -9,7 +9,7 @@ module.exports = (titulo, conteudo) => `
     <title>${titulo}</title>
   </head>
   <body> 
-    <nav class="navbar navbar-expand-lg navbar-light bg-dark">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
       <img class="logo" src="imagens/ifpr.png" alt="logo do IFPR">
       <a class="navbar-brand ms-4" href="#">IFPR</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">

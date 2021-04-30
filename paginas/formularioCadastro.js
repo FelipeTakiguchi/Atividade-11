@@ -1,9 +1,6 @@
 const template = require('./template');
 
-let teste = 0;
 module.exports = (req, res) => {
-    console.log(teste);
-    teste++;
   const html = template(
     'Cadastro',
     `

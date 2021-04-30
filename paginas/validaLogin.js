@@ -11,7 +11,6 @@ module.exports.post = (req, res) => {
 
   for (let i = 0; i < listaCadastros.length; ) {
     const cadastro = listaCadastros[i];
-    console.log(cadastro);
     if (email === cadastro.novoEmail && senha === cadastro.novaSenha) {
       ok = true;
       status = 200;
