@@ -3,19 +3,20 @@ const cadastros = [{}];
 module.exports.cadastros = cadastros;
 module.exports.post = (req, res) => {
   const params = req.body;
-  const { email, senha, senhadois } = params;
+  const { nome, email, senha, senhadois } = params;
   let status;
   let html;
-  if (email !== '' && senha !== '' && senhadois !== '') {
+  if (nome !== '' & email !== '' && senha !== '' && senhadois !== '') {
     if(senha === senhadois){
       const cadastro = {
+        novoNome: nome,
         novoEmail: email,
         novaSenha: senha,
         novaSenhaDois: senhadois,
       };
       cadastros.push(cadastro);
       status = 200;
-      html = template('Cadastrado com sucesso', `<p>Seja bem vindo ${email}</p>`);
+      html = template('Cadastrado com sucesso', `<p>Seja bem vindo ${nome}</p>`);
     } else{
       status = 401;
       html = template(

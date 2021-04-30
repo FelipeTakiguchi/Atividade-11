@@ -15,7 +15,7 @@ module.exports.post = (req, res) => {
     if (email === cadastro.novoEmail && senha === cadastro.novaSenha) {
       ok = true;
       status = 200;
-      html = template('Logado com sucesso', `<p>Seja bem vindo ${email}</p>`);
+      html = template('Logado com sucesso', `<p>Seja bem vindo ${cadastro.novoNome}</p>`);
     }
     i += 1;
   }
